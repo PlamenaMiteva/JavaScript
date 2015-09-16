@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Draw Face</title>
+    <style>
+    #canvas {
+        border: 2px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="600">
+    </canvas>
+    <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'lightblue';
+    ctx.strokeStyle = 'blue';
+    ctx.lineWidth = 4;
+
+    function convertDegToRad(deg) {
+        return deg * Math.PI / 180;
+    }
+    ctx.arc(300, 300, 80, 0, convertDegToRad(360));
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(260, 280, 20, 10, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.fillStyle = 'blue';
+    ctx.ellipse(255, 280, 5, 8, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(330, 280, 20, 10, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.fillStyle = 'blue';
+    ctx.ellipse(325, 280, 5, 8, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(295, 350, 30, 10, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(295, 280);
+    ctx.lineTo(285, 320);
+    ctx.lineTo(300, 320);
+    ctx.stroke();
+    ctx.closePath();  
+    
+
+    ctx.beginPath();
+    ctx.ellipse(300, 220, 100, 20, 0, 0, Math.PI * 2);
+    ctx.fillStyle = 'blue';
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(300, 215, 50, 20, 0, 0, Math.PI * 2);
+    ctx.fillStyle = 'blue';
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(250, 150);
+    ctx.lineTo(250, 220);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(350, 150);
+    ctx.lineTo(350, 220);    
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(350, 220);
+    ctx.lineTo(250, 220);  
+    ctx.lineTo(250, 150);
+    ctx.lineTo(350, 150);
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(300, 150, 50, 20, 0, 0, Math.PI * 2);
+    ctx.fillStyle = 'blue';
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+
+    
+    </script>
+</body>
+
+</html>

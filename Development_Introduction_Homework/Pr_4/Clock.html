@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clock</title>
+	<script type="text/javascript">
+  function timerFunc() {
+    var now = new Date();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    document.getElementById("clock").value = 
+      "" + hour + ":" + min + ":" + sec;
+  }
+  setInterval('timerFunc()', 1000);
+</script>
+
+</head>
+<body>
+	<header><h1>The current time is:</h1></header>
+<input type="text" id="clock" />
+	
+</body>
+</html>

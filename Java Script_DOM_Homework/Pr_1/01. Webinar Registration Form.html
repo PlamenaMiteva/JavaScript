@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webinar Registration Form</title>
+    <style>
+    #wrapper{
+    	background-color: pink;
+    	width: 400px;
+    }
+    </style>
+</head>
+
+<body>
+	<div id="wrapper">
+    <header>
+        <h1>Регистрация за уебинар</h1>
+    </header>
+    
+    <fieldset>
+        <legend>Име и фамилия:*</legend>
+        <input type="text" name="names" id="names" required="true" />
+        <legend>Адрес:</legend>
+        <input type="text" name="address" id="address" />
+        <legend>Пощенски код:</legend>
+        <input type="text" name="address" id="address" />
+        <legend>Email:*</legend>
+        <input type="email" name="mail" id="mail" required="true" />
+        <legend>Телефон:*</legend>
+        <input type="tel" name="phone" id="phone" required="true" />
+        <legend>Дата на семинара:*</legend>
+        <input type="date" name="webinarDate" id="date">
+        <br>
+        <input type="checkbox" name="invoice" id="invoice" value="invoice">Желая фактура<br>
+        <form action="" id="invoiceData">
+            <legend>Фирма/Организация:*</legend>
+            <input type="text" name="company" id="company" required="true" />
+            <legend>МОЛ:*</legend>
+            <input type="text" name="MOL" id="MOL" required="true" />
+            <legend>ЕИК:*</legend>
+            <input type="number" name="Bulstat" id="Bulstat" required="true" />
+            <legend>ИН по ДДС:*</legend>
+            <input type="text" name="idNumber" id="idNumber" required="true" />
+            <legend>Адрес:*</legend>
+            <input type="text" name="companyAddress" id="companyAddress" required="true" />
+            <br>
+        </form>
+        <input type="submit" value="Регистрирай се" />
+        <input type="reset" value="Изчисти" />
+        <script>
+        var form = document.getElementById("invoiceData");
+        document.getElementById('invoice').onchange = function() {
+            form.style.display = this.checked ? 'block' : 'none';
+        };
+        </script>
+    </fieldset>
+    </div>
+</body>
+
+</html>

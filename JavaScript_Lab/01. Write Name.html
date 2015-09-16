@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Write Name</title>
+    <style>
+    #canvas {
+        border: 2px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="600">
+    </canvas>
+    <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.font = '98px Consolas';
+    ctx.lineWidth = 4;
+    ctx.fillStyle = 'pink';
+    ctx.strokeStyle = 'green';
+    ctx.fillText('Ivan', 250, 100);
+    ctx.strokeText('Ivan', 250, 100);
+    </script>
+</body>
+
+</html>

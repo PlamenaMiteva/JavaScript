@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Draw House</title>
+    <style>
+    #canvas {
+        border: 2px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="600">
+    </canvas>
+    <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'darkred';
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 4;
+
+    function convertDegToRad(deg) {
+        return deg * Math.PI / 180;
+    }
+    ctx.beginPath();
+    ctx.fillRect(canvas.clientWidth / 5, canvas.clientHeight / 2, 400, 280);
+    ctx.strokeRect(canvas.clientWidth / 5, canvas.clientHeight / 2, 400, 280);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(180, 340, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(260, 340, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(180, 390, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(260, 390, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(380, 340, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(460, 340, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(380, 390, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(460, 390, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(380, 450, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(460, 450, 70, 40);
+    ctx.closePath
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(380, 500, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(460, 500, 70, 40);
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(180, 580);
+    ctx.bezierCurveTo(180, 400, 320, 400, 320, 580);
+    ctx.stroke();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.moveTo(250, 580);
+    ctx.lineTo(250, 445);
+    ctx.stroke();
+    ctx.closePath();
+
+    function convertDegToRad(deg) {
+        return deg * Math.PI / 180;
+    }
+    ctx.beginPath();
+    ctx.arc(270, 540, 5, 0, convertDegToRad(360));
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.arc(230, 540, 5, 0, convertDegToRad(360));
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.fillStyle = 'darkred';
+    ctx.moveTo(canvas.clientWidth / 5, canvas.clientHeight / 2);
+    ctx.lineTo(350, 60);
+    ctx.lineTo(canvas.clientWidth / 5 + 400, canvas.clientHeight / 2);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+
+
+
+    ctx.beginPath();
+    ctx.moveTo(460, 130);
+    ctx.lineTo(460, 280);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(500, 130);
+    ctx.lineTo(500, 280);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(460, 280);
+    ctx.lineTo(500, 280);
+    ctx.lineTo(500, 130);
+    ctx.lineTo(460, 130);
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.ellipse(480, 130, 20, 10, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
+    </script>
+</body>
+
+</html>
